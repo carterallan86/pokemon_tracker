@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@index');
+Route::get('/tracking', 'PagesController@tracking');
+Route::get('/shinyhunting', 'PagesController@shinyhunting');
+
+Route::resource('monsters', 'MonstersController');
